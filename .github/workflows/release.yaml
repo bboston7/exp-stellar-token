@@ -47,6 +47,7 @@ jobs:
       # 5️⃣ Build the contract and mark the WASM with the current repository.
       - name: Build contract
         run: |
+          rustup target add wasm32-unknown-unknown
           stellar contract build \
             --meta home_domain=example.com \
             --meta source_repo=github:${{ github.repository }}
