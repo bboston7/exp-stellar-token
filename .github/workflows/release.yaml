@@ -31,7 +31,7 @@ jobs:
       # 3️⃣ Set up env vars that will be used in the workflow.
       - name: Set up env vars
         run: |
-          echo "WASM_FILE=target/wasm32v1-none/release/token.wasm" >> $GITHUB_ENV
+          echo "WASM_FILE=target/wasm32-unknown-unknown/release/token.wasm" >> $GITHUB_ENV
 
           if [ -n "${{ github.event.inputs.release_name }}" ]; then
             echo "TAG_NAME=${{ github.event.inputs.release_name }}" >> $GITHUB_ENV
